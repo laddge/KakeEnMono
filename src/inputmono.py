@@ -7,5 +7,5 @@ def main():
     font_path = os.path.join(PROJECTDIR, 'fonts/InputMono-Regular.ttf')
     font = fontforge.open(font_path)
     save_path = os.path.join(PROJECTDIR, 'fonts/InputMono-Regular-edited.ttf')
-    font.save(save_path)
+    font.generate(save_path)
     return save_path
