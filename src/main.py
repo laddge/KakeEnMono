@@ -1,13 +1,17 @@
 import os
 import fontforge
+import inputmono
+import togoshi
 
 
 def main():
-    FONTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../fonts')
+    PROJECTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
     font = fontforge.font()
-    font.mergeFonts(os.path.join(FONTDIR, 'InputMono-Regular.ttf'))
-    font.mergeFonts(os.path.join(FONTDIR, 'togoshi-mono.ttf'))
-    font.generate(os.path.join(FONTDIR, 'Sova_Mono-Regular.ttf'))
+    inputmono_fn = inputmono.main()
+    togoshi_fn = togoshi.main()
+    font.mergeFonts(inputmono_fn)
+    font.mergeFonts(togoshi_fn)
+    font.generate(os.path.join(PROJECTDIR, 'fonts/Sova_Mono-Regular.ttf'))
 
 
 if __name__ == '__main__':
