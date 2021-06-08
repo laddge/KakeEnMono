@@ -1,5 +1,3 @@
-#!fontforge -lang=py -script
-
 import os
 import fontforge
 
