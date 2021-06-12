@@ -1,5 +1,6 @@
 import os
 import fontforge
+import psMat
 
 
 def main():
@@ -13,6 +14,13 @@ def main():
     font.ascent = float(ascent) / em * old_em
     font.descent = float(descent) / em * old_em
     font.em = em
+    scale = psMat.scale(0.86)
+    x = em * (1 - 0.86) / 2
+    trans = psMat.translate(x, 0)
+    mat = psMat.compose(scale, trans)
+    for glyph in font.glyphs():
+        if glyph.isWorthOutputting():
+            glyph.transform(mat)
     save_path = os.path.join(PROJECTDIR, 'fonts/GenJyuuGothic-Monospace-Regular-edited.ttf')
     font.generate(save_path)
     return save_path
