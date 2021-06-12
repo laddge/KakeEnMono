@@ -6,8 +6,8 @@ def main():
     PROJECTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
     font_path = os.path.join(PROJECTDIR, 'fonts/GenJyuuGothic-Monospace-Regular.ttf')
     font = fontforge.open(font_path)
-    ascent = 850
-    descent = 250
+    ascent = 800
+    descent = 200
     old_em = 1024
     em = ascent + descent
     font.ascent = float(ascent) / em * old_em

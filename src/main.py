@@ -1,14 +1,14 @@
 import os
 import fontforge
-import inputmono
+import ubuntumono
 import genjyuu
 
 
 def main():
     PROJECTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
-    inputmono_fn = inputmono.main()
+    ubuntumono_fn = ubuntumono.main()
     genjyuu_fn = genjyuu.main()
-    font = fontforge.open(inputmono_fn)
+    font = fontforge.open(ubuntumono_fn)
     font.mergeFonts(genjyuu_fn)
     font.generate(os.path.join(PROJECTDIR, 'fonts/Sova_Mono-Regular.ttf'))
 
