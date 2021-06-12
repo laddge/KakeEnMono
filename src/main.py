@@ -20,7 +20,7 @@ def main():
     font.selection.select(0x3000)
     font.pasteInto()
     font.intersect()
-    font.generate(os.path.join(PROJECTDIR, 'fonts/Sova_Mono-Regular.ttf'))
+    font.generate(os.path.join(PROJECTDIR, 'fonts/KakeEnMono-Regular.ttf'))
 
 
 if __name__ == '__main__':
