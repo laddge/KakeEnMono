@@ -20,7 +20,9 @@ def main():
     mat = psMat.compose(scale, trans)
     for glyph in font.glyphs():
         if glyph.isWorthOutputting():
+            width = glyph.width
             glyph.transform(mat)
+            glyph.width = width
     save_path = os.path.join(PROJECTDIR, 'fonts/GenJyuuGothic-Monospace-Regular-edited.ttf')
     font.generate(save_path)
     return save_path

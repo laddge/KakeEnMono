@@ -38,7 +38,7 @@ Copyright(c) 2015 M+ FONTS PROJECT'''
     font.familyname = 'KakeEn Mono'
     font.fontname = 'KakeEnMono-Regular'
     font.fullname = 'KakeEn Mono'
-    font.version = '1.0.0'
+    font.version = '1.0.1'
     # 保存
     font.generate(os.path.join(PROJECTDIR, 'fonts/KakeEnMono-Regular.ttf'))
 
